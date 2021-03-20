@@ -14,6 +14,8 @@
 		DC778C702606225C0022E24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC778C6F2606225C0022E24B /* Assets.xcassets */; };
 		DC778C732606225C0022E24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC778C712606225C0022E24B /* LaunchScreen.storyboard */; };
 		DC778C85260637810022E24B /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC778C84260637810022E24B /* CountriesTableViewController.swift */; };
+		DC778C89260639370022E24B /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC778C88260639370022E24B /* Country.swift */; };
+		DC778C8D260639720022E24B /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC778C8C260639720022E24B /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DC778C722606225C0022E24B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC778C742606225C0022E24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC778C84260637810022E24B /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
+		DC778C88260639370022E24B /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		DC778C8C260639720022E24B /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		DC778C652606225A0022E24B /* TP2_Groupe_4 */ = {
 			isa = PBXGroup;
 			children = (
+				DC778C8B2606395B0022E24B /* data */,
+				DC778C87260638E20022E24B /* models */,
 				DC778C662606225A0022E24B /* AppDelegate.swift */,
 				DC778C682606225A0022E24B /* SceneDelegate.swift */,
 				DC778C6A2606225A0022E24B /* ViewController.swift */,
@@ -68,6 +74,22 @@
 				DC778C742606225C0022E24B /* Info.plist */,
 			);
 			path = TP2_Groupe_4;
+			sourceTree = "<group>";
+		};
+		DC778C87260638E20022E24B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				DC778C88260639370022E24B /* Country.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		DC778C8B2606395B0022E24B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				DC778C8C260639720022E24B /* Countries.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +165,8 @@
 				DC778C85260637810022E24B /* CountriesTableViewController.swift in Sources */,
 				DC778C6B2606225A0022E24B /* ViewController.swift in Sources */,
 				DC778C672606225A0022E24B /* AppDelegate.swift in Sources */,
+				DC778C89260639370022E24B /* Country.swift in Sources */,
+				DC778C8D260639720022E24B /* Countries.swift in Sources */,
 				DC778C692606225A0022E24B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
