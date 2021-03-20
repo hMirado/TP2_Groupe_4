@@ -26,8 +26,6 @@ public extension Sequence {
 
 let groupedCountries = countries.group(by: \.continent)
 
-let groupedCountriesLength = groupedCountries.count
-
 let groupByContinent = Dictionary(grouping: countries) { (device) -> String in
     return device.continent
 }

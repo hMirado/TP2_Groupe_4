@@ -8,15 +8,11 @@
 import UIKit
 
 class CountriesTableViewController: UITableViewController {
-    
-        var cont=""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
-        
-        //print(groupedCountries.map(<#T##transform: ((key: String, value: [Country])) throws -> T##((key: String, value: [Country])) throws -> T#>))
-        print(groupByContinent)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,36 +25,28 @@ class CountriesTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return groupedCountriesLength
+        return groupByContinent.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return countries.count
+        return groupByContinent[Array(groupByContinent.keys)[section]]!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
         
-        let country = countries[indexPath.row]
-        
-        
-        
+        let continent = Array(groupByContinent.keys)[indexPath.section]
+        let country = groupByContinent[continent]![indexPath.row]
         cell.textLabel?.text = country.name
         cell.detailTextLabel?.text = country.isoCode
         cell.imageView?.image = UIImage(named: country.isoCode)
-
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        for continent in groupByContinent.keys {
-            cont += continent
-        }
-        
-        
-            return "\(cont)"
-        //return "Section \(groupByContinent.keys)"
+        return "\(Array(groupByContinent.keys)[section])"
     }
 
     /*
